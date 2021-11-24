@@ -1,0 +1,240 @@
+version: "2.0"
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+  - greet:
+      use_entities: true
+  - goodbye:
+      use_entities: true
+  - affirm:
+      use_entities: true
+  - deny:
+      use_entities: true
+  - mood_great:
+      use_entities: true
+  - mood_unhappy:
+      use_entities: true
+  - thanks:
+      use_entities: true
+  - tanya_waktu:
+      use_entities: true
+  - tanya_gambar:
+      use_entities: true
+  - bot_challenge:
+      use_entities: true
+  - formulir_tersedia:
+      use_entities: true
+  - faq:
+      use_entities: true
+entities:
+  - isi_formulir
+  - tipe_permohonan
+  - waktu
+  - tanggal
+  - hari
+slots: {}
+responses:
+  utter_affirm:
+    - text: Baiklah silahkan bertanya seputar FAQ Unsri!
+  utter_deny:
+    - text: Baiklah!
+  utter_greet:
+    - text: Halo! Selamat datang di chatbox FAQ UNSRI. Ada yang bisa saya bantu?
+  utter_thanks:
+    - text: Sama - sama :D
+  utter_goodbye:
+    - text: Sampai Jumpa! :D
+  utter_iamabot:
+    - text: Saya adalah sebuah bot FAQ Unsri yang dikembangkan oleh Kelompok 11.
+  utter_faq/tanya_biodata_penghuni_asrama_1:
+    - text: |-
+        Biodata penghuni asrama mahasiswa Universitas Sriwijaya memerlukan data :
+         - mahasiswa
+         - orangtua / wali
+         - keluarga / teman yang tinggal di Palembang
+         - riwayat kesehatan
+  utter_faq/tanya_biodata_penghuni_asrama_2:
+    - text: |-
+        Biodata penghuni asrama mahasiswa Universitas Sriwijaya harus ditandatangani oleh :
+         - orangtua / wali
+         - mahasiswa
+         - dekan fakultas
+  utter_faq/tanya_biodata_penghuni_asrama_3:
+    - text: |-
+        Informasi mahasiswa yang dibutuhkan dalam biodata penghuni asrama mahasiswa Universitas Sriwijaya adalah :
+         - nama
+         - jenis kelamin
+         - tempat tanggal lahir
+         - agama
+         - fakultas / jurusan
+         - hobi
+         - alamat
+         - nomor HP
+         - email mahasiswa
+  utter_faq/tanya_biodata_penghuni_asrama_4:
+    - text: |-
+        Informasi orangtua / wali yang dibutuhkan dalam biodata penghuni asrama mahasiswa Universitas Sriwijaya adalah : - nama
+         - pekerjaan
+         - agama
+         - penghasilan
+         - alamat tinggal
+         - nomor HP / telepon dari ayah dan ibu
+  utter_faq/tanya_biodata_penghuni_asrama_5:
+    - text: |-
+        Informasi keluarga / teman yang tinggal di Palembang yang dibutuhkan dalam biodata penghuni asrama mahasiswa Universitas Sriwijaya adalah :
+         - nama
+         - tempat dan tanggal lahir
+         - pekerjaan
+         - agama
+         - tempat tinggal
+         - nomor HP / telepon
+  utter_faq/tanya_biodata_penghuni_asrama_6:
+    - text: |-
+        Informasi riwayat kesehatan yang dibutuhkan dalam biodata penghuni asrama mahasiswa Universitas Sriwijaya adalah :
+         - informasi penyakit kronis yang pernah atau sedang diderita
+         - nama obat khusus yang diperlukan secara rutin
+         - luka berat yang pernah diderita karena jatuh atau kecelakaan
+  utter_faq/tanya_biodata_penghuni_asrama_7:
+    - image: https://drive.google.com/drive/folders/109bfwrafdRjwVt4UXQbbqfSYUieIQ7d5?usp=sharing
+      text: "Data yang diperlukan untuk mengisi biodata akademik alumni dapat dilihat pada Link berikut :"
+  utter_faq/tanya_formulir_pengunduran_diri_1:
+    - text: Formulir pengunduran diri di isi oleh mahasiswa yang ingin mengundurkan diri
+  utter_faq/tanya_formulir_pengunduran_diri_2:
+    - text: |-
+        Hal yang perlu di isi di formulir pengunduran diri sebagai mahasiswa Universitas Sriwijaya yaitu
+         - Nama
+         - NIM
+         - Alamat
+         - No. Tel
+         - Fakultas/Program
+         - Program Pendidikan
+         - Jurusan/Program Studi
+         - Fakultas
+         - Semester
+  utter_faq/tanya_formulir_pengunduran_diri_3:
+    - image: https://drive.google.com/file/d/1ZxctHzI5rxxzlPEENFZNAzHvwR-wNgdj/view?usp=sharing
+      text: "Data yang diperlukan untuk mengisi biodata akademik alumni dapat dilihat pada Link berikut :"
+  utter_faq/tanya_pindah_program_studi_1:
+    - text: |-
+        Tanda tangan yang dibutuhkan dalam formulir perpindahan program studi adalah tanda tangan
+         - Orang tua/wali
+         - mahasiswa
+         - ketua jurusan
+         - dan dekan/direktur
+  utter_faq/tanya_pindah_program_studi_2:
+    - text: Formulir perpindahan program studi ditujukan kepada Rektor Universitas Sriwijaya
+  utter_faq/tanya_pindah_program_studi_3:
+    - image: https://drive.google.com/file/d/1H5BPZffWewWKbIYaVm1DN4Hdtg_EIdDN/view?usp=sharing
+      text: "Anda bisa mendownload format formulir permohonan perpindahan mahasiswa antar program studi pada tautan berikut : "
+  utter_faq/tanya_pindah_program_studi_4:
+    - text: |-
+        Data yang diperlukan dalam formulir permohonan perpindahan program studi adalah :
+         - Nama
+         - NIM
+         - Alamat & No. Tel
+         - No. Tel/hp
+         - Fakultas/Program
+         - Program Pendidikan
+         - Jurusan
+         - Program Studi
+         - Semester
+         - Alasan pindah program studi
+  utter_faq/tanya_pindah_ke_unsri_1:
+    - text: Untuk dapat melakukan perpindahan ke Universitas Sriwijaya anda diwajibkan untuk mengisi formulir permohonan perpindahan ke Universitas Sriwijaya beserta melampirkan dokumen/persyaratan yang dapat dijadikan bahan pertimbangan untuk masuk ke Universitas Sriwijaya
+  utter_faq/tanya_pindah_ke_unsri_2:
+    - text: |-
+        Dokumen yang dapat dijadikan sebagai bahan pertimbangan yaitu :
+         - Surat Keterangan/Rekomendasi dari Rektor PT asal
+         - Fotokopi Daftar Nilai Akademik/KHS
+         - Dokumen persyaratan yang mendukung permohonan ini
+  utter_faq/tanya_pindah_ke_unsri_3:
+    - text: Anda dapat melampirkan 2 lembar fotokopi Nilai Akademik yang sudah dilegalisir
+  utter_faq/tanya_pindah_ke_unsri_4:
+    - text: Untuk menandatangani formulir Permohonan Perpindahan anda hanya memerlukan satu materai bernilai Rp.6000
+  utter_faq/tanya_pindah_ke_unsri_5:
+    - text: |-
+        Data diri yang dibutuhkan untuk mengisi formulir Permohonan Perpindahan ialah :
+         - Nama
+         - Nim
+         - Alamat
+         - No. Telp
+         - Fakultas
+         - Jurusan
+         - Program Studi
+         - Semester yang ditempuh
+  utter_faq/tanya_pindah_ke_unsri_6:
+    - image: https://drive.google.com/file/d/12MM2YaNIjJ5praqglEeZaQtlMjU_lRQ8/view?usp=sharing
+      text: "Anda bisa mendownload format formulir permohonan perpindahan mahasiswa antar program studi pada tautan berikut : "
+  utter_faq/tanya_pindah_mahasiswa_unsri_ke_pt_lain_1:
+    - text: Formulir tersebut tersedia pada buku pedoman akademik lampiran 11 halaman 86
+  utter_faq/tanya_pindah_mahasiswa_unsri_ke_pt_lain_2:
+    - text: Formulir tersebut membutuhkan fotokopi daftar nilai akademik/KHS (dilegalisir) dan dokumen persyaratan yang mendukung permohonan tersebut
+  utter_faq/tanya_pindah_mahasiswa_unsri_ke_pt_lain_3:
+    - text: Pada formulir tersebut, tanggal yang ditulis adalah tanggal saat formulir ini ditulis/ditandatangani
+  utter_faq/tanya_pindah_mahasiswa_unsri_ke_pt_lain_4:
+    - text: Formulir tersebut ditujukan kepada Rektor Universitas Sriwijaya
+  utter_faq/tanya_pindah_mahasiswa_unsri_ke_pt_lain_5:
+    - text: |-
+        Tanda tangan yang dibutuhkan dalam formulir tersebut adalah tanda tangan
+         - Orang tua/wali
+         - mahasiswa
+         - ketua jurusan
+         - dan dekan/direktur
+  utter_faq/tanya_pindah_mahasiswa_unsri_ke_pt_lain_6:
+    - image: https://drive.google.com/file/d/1-HmbTyfCejXq6OwsWyLqmxDEvkxNZCDo/view?usp=sharing
+      text: "Anda bisa mendownload format formulir permohonan perpindahan mahasiswa antar program studi pada tautan berikut : "
+  utter_faq/tanya_permohonan_wisuda_1:
+    - text: |-
+        Berikut data - data yang perlu diisikan didalam formulir permohonan mengikuti wisuda Universitas Sriwijaya :
+         - Nama/NIM
+         - Fakultas/Program
+         - Jurusan/Program Studi
+         - Kelas
+         - Gelar Akademik
+         - Tempat Lahir
+         - Tanggal Lahir
+         - IPK & Predikat Kelulusan
+         - Alamat Alumni
+         - No.Telepon
+         - Nama Orang Tua
+         - Alamat Orang Tua
+         - Tanggal Terdaftar di Universitas Sriwijaya
+         - Tanggal Yudisium
+         - Masa Studi
+         - Judul Skripsi
+        17. Pas Foto mahasiswa 3x4 cm
+  utter_faq/tanya_permohonan_wisuda_2:
+    - text: |-
+        Berikut berkas - berkas persyaratan yang diperlukan untuk dilampirkan bersama formulir permohonan mengikuti wisuda Universitas Sriwijaya :
+         - Fotokopi Daftar Nilai Akademik (Transkrip) dari Fakultas/Program sesuai format dan blanko yang ditetapkan
+         - Fotokopi ijazah terakhir
+         - Fotokopi judul dan halaman pengesahan Skripsi/Tesis/Disertai bagi program pendidikan sarjana dan pascasarjana
+         - Fotokopi Abstrak makalah yang dipublikasikan (untuk program magister dan doktor)
+         - Kartu Pengenal Mahasiswa (KPM) asli
+         - Pas foto ukuran 3x4 cm, 4 lembar (dimasukkan kedalam plastik, tulis Nama, NIM, Fakultas, Jurusan pada bagian belakang)
+         - Biodata mahasiswa untuk pembuatan 'Buku Alumni' sesuai dengan format yang ditetapkan
+         - Menyerahkan bukti bebas pustaka Universitas Sriwijaya
+  utter_faq/tanya_permohonan_wisuda_3:
+    - image: https://drive.google.com/file/d/1hICkq7gulbzPa62w6DptqMI-E6XS3Xeo/view?usp=sharing
+      text: "Anda bisa mendownload format formulir permohonan mengikuti wisuda universitas sriwijaya pada tautan berikut : "
+  utter_faq/tanya_permohonan_wisuda_4:
+    - text: Pas foto yang diperlukan dalam formulir permohonan mengikuti wisuda Universitas Sriwijaya berukuran 3 x 4 cm sebanyak 5 lembar. 1 lembar foto dipasang/ditempelkan pada formulir dan 4 lembar foto dilampirkan sebagai berkas persyaratan (dimasukkan kedalam plastik, tulis Nama, NIM, Fakultas, Jurusan pada bagian belakang)
+  utter_faq/biodata_akademik_alumni_1:
+    - text: Ukuran pas foto yang dugunakan adalah 3 x 4cm
+  utter_faq/biodata_akademik_alumni_2:
+    - text: Warna yang digunakan untuk pas foto adalah hitam putih
+  utter_faq/biodata_akademik_alumni_3:
+    - image: https://drive.google.com/file/d/17Cs5p72Pc07X9kbrtsh48OxUd4qNK5lh/view?usp=sharing
+      text: "Data yang diperlukan untuk mengisi biodata akademik alumni dapat dilihat pada Link berikut :"
+  utter_faq/biodata_akademik_alumni_4:
+    - text: Diperlukan data orang tua untuk mengisi biodata akademik alumni
+  utter_faq/biodata_akademik_alumni_5:
+    - text: IPK dan predikat kelulusan perlu diisi pada biodata akademik alumni
+actions:
+  - action_cek_formulir
+  - action_beri_waktu
+forms: {}
+e2e_actions: []

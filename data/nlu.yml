@@ -1,0 +1,489 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hai
+    - halo
+    - hello
+    - hi
+    - selamat pagi
+    - selamat malam
+    - selamat siang
+- intent: tanya_waktu
+  examples: |
+    - sekarang [jam](waktu) berapa?
+    - [jam](waktu) berapakah sekarang?
+    - bolehkah saya mengetahui [jam](waktu) sekarang?
+    - kalau boleh tau sekarang [jam](waktu) berapa?
+    - sekarang [tanggal](tanggal) berapa?
+    - [tanggal](tanggal) berapakah sekarang?
+    - bolehkah saya mengetahui [tanggal](tanggal) sekarang?
+    - kalau boleh tau sekarang [tanggal](tanggal) berapa?
+    - sekarang [hari](hari) apa?
+    - kalau boleh tau sekarang [hari](hari)  apa?
+    - bolehkah saya mengetahui sekarang [hari](hari)  apa?
+- intent: goodbye
+  examples: |
+    - sampai jumpa
+    - sampai jumpa kembali
+    - dadah
+    - selamat tinggal
+    - bye bye
+- intent: affirm
+  examples: |
+    - ya
+    - iya
+    - tentu saja
+    - ada
+    - tentu saja ada
+    - boleh
+    - benar
+    - yup
+- intent: deny
+  examples: |
+    - tidak
+    - tidak ada
+    - nggak
+    - ga mau
+    - nggak jadi
+    - tidak jadi
+    - gak
+- intent: thanks
+  examples: |
+    - terimakasih
+    - terima kasih ya
+    - terimakasih banyak
+    - makasih
+    - thanks
+- intent: bot_challenge
+  examples: |
+    - apakah kamu sebuah bot?
+    - apakah kamu manusia?
+    - apakah saya sedang berbicara dengan bot?
+    - apakah saya sedang berbicara dengan manusia?
+    - kamu siapa?
+    - ini siapa ya?
+    - saya berbicara dengan siapa?
+    - siapa?
+- intent: formulir_tersedia
+  examples: |
+    - apakah di sini ada biodata [penghuni asrama](isi_formulir) mahasiswa unsri?
+    - bisa mendapatkan formulir [pengunduran diri](isi_formulir) sebagai mahasiswa unsri tidak?
+    - di bot ini ada formulir [perpindahan](isi_formulir) antar [program studi](tipe_permohonan)?
+    - adakah formulir [perpindahan](isi_formulir) dari [universitas sriwijaya](tipe_permohonan) ke perguruan tinggi lain?
+    - saya bisa mendapatkan formulir [perpindahan](isi_formulir) dari [perguruan tinggi lain](tipe_permohonan) ke universitas sriwijaya tidak?
+- intent: faq/tanya_biodata_penghuni_asrama_1
+  examples: |
+    - apa saja isi form biodata penghuni asrama mahasiswa universitas sriwijaya?
+    - apa saja isi biodata asrama mahasiswa?
+    - apa saja data yang dibutuhkan untuk mengisi form biodata mahasiswa unsri?
+    - apa saja yang informasinya dibutuhkan saat mengisi biodata asrama mahasiswa?
+    - data apa saja yang diperlukan untuk mengisi biodata asrama mahasiswa?
+    - data apa yang dibutuhkan untuk mengisi biodata asrama mahasiswa?
+    - data yang dibutuhkan untuk mengisi form biodata mahasiswa unsri apa saja?
+    - butuh data apa untuk mengisi biodata asrama mahasiswa?
+    - butuh mengisi data apa saja pada form biodata penghuni asrama mahasiswa?
+    - butuh mengisi apa di formulir biodata penghuni asrama mahasiswa?
+    - informasi apa saja yang dibutuhkan untuk mengisi biodata asrama mahasiswa unsri?
+    - informasi apa yang perlu saya isi pada biodata asrama mahasiswa universitas sriwijaya?
+    - informasi apa yang diperlukan saat saya mengisi biodata asrama mahasiswa unsri?
+- intent: faq/tanya_biodata_penghuni_asrama_2
+  examples: |
+    - siapa yang harus menandatangani form biodata penghuni asrama mahasiswa universitas sriwijaya?
+    - siapa yang harus menandatangani biodata asrama mahasiswa?
+    - siapa saja yang menandatangani form biodata asrama mahasiswa?
+    - tanda tangan siapa saja yang diperlukan untuk mengisi biodata asrama mahasiswa ini?
+    - tanda tangan orang tua apakah diperlukan untuk mengisi form biodata asrama mahasiswa unsri?
+    - apakah saya memerlukan persetujuan orangtua untuk mengisi biodata asrama mahasiswa ini?
+    - apakah orangtua perlu setuju dengan biodata asrama mahasiswa ini?
+    - perlukah persetujuan berupa tanda tangan untuk biodata penghuni asrama?
+    - perlukah tanda tangan untuk form biodata penghuni asrama?
+    - dapatkah saya mengisi form biodata asrama mahasiswa unsri tanpa tanda tangan orangtua?
+    - dapatkah saya mengisi biodata asrama mahasiswa ini tanpa persetujuan orangtua?
+    - dapatkah saya mengisi form biodata asrama mahasiswa unsri tanpa tanda tangan dekan fakultas?
+    - dapatkah saya mengisi biodata asrama mahasiswa ini tanpa persetujuan dekan fakultas?
+    - apakah dekan fakultas perlu setuju dengan biodata asrama mahasiswa ini?
+    - apakah orangtua perlu setuju dengan biodata asrama mahasiswa unsri?
+- intent: faq/tanya_biodata_penghuni_asrama_3
+  examples: |
+    - apa saja informasi mahasiswa yang harus dimasukkan di form biodata penghuni asrama mahasiswa universitas sriwijaya?
+    - apa saja informasi mahasiswa yang harus dimasukkan di biodata asrama mahasiswa?
+    - apa saja yang di butuhkan terkait informasi mahasiswa pada biodata penghuni asrama mahasiswa?
+    - data mahasiswa apa saja yang diperlukan biodata asrama mahasiswa?
+    - data terkait mahasiswa apa saja yang dibutuhkan untuk form biodata asrama mahasiswa?
+    - data apa yang diperlukan untuk mengisi form biodata mahasiswa pada bagian mahasiswa?
+    - data terkait mahasiswa pada form biodata mahasiswa perlu di isi apa?
+    - biodata asrama mahasiswa memerlukan data mahasiswa apa saja?
+    - biodata asrama bagian mahasiswa butuh di isi apa saja?
+    - biodata asrama mahasiswa apa saja yang di isi pada bagian mahasiswanya?
+    - biodata asrama mahasiswa unsri apa saja informasi yang dibutuhkan pada bagian mahasiswanya?
+- intent: faq/tanya_biodata_penghuni_asrama_4
+  examples: |
+    - apa saja informasi orang tua atau wali yang harus dimasukkan di form biodata penghuni asrama mahasiswa universitas sriwijaya?
+    - apa saja informasi orang tua atau wali yang harus dimasukkan di biodata asrama mahasiswa?
+    - apa saja yang di butuhkan terkait informasi orang tua atau wali pada biodata penghuni asrama mahasiswa?
+    - data orang tua atau wali apa saja yang diperlukan biodata asrama mahasiswa?
+    - data terkait orang tua atau wali apa saja yang dibutuhkan untuk form biodata asrama mahasiswa?
+    - data apa yang diperlukan untuk mengisi form biodata mahasiswa pada bagian orang tua atau wali?
+    - data terkait orang tua atau wali pada form biodata mahasiswa perlu di isi apa?
+    - biodata asrama mahasiswa memerlukan data orang tua atau wali apa saja?
+    - biodata asrama bagian orang tua atau wali butuh di isi apa saja?
+    - biodata asrama mahasiswa apa saja yang di isi pada bagian orang tua atau walinya?
+    - biodata asrama mahasiswa unsri apa saja informasi yang dibutuhkan pada bagian orang tua atau walinya?
+- intent: faq/tanya_biodata_penghuni_asrama_5
+  examples: |
+    - apa saja informasi keluarga atau teman yang harus dimasukkan di form biodata penghuni asrama mahasiswa universitas sriwijaya?
+    - apa saja informasi keluarga atau teman yang harus dimasukkan di biodata asrama mahasiswa?
+    - apa saja yang di butuhkan terkait informasi keluarga atau teman pada biodata penghuni asrama mahasiswa?
+    - data keluarga atau teman apa saja yang diperlukan biodata asrama mahasiswa?
+    - data terkait keluarga atau teman apa saja yang dibutuhkan untuk form biodata asrama mahasiswa?
+    - data apa yang diperlukan untuk mengisi form biodata mahasiswa pada bagian keluarga atau teman?
+    - data terkait keluarga atau teman pada form biodata mahasiswa perlu di isi apa?
+    - biodata asrama mahasiswa memerlukan data keluarga atau teman apa saja?
+    - biodata asrama bagian keluarga atau teman butuh di isi apa saja?
+    - biodata asrama mahasiswa apa saja yang di isi pada bagian keluarga atau temannya?
+    - biodata asrama mahasiswa unsri apa saja informasi yang dibutuhkan pada bagian keluarga atau temannya?
+- intent: faq/tanya_biodata_penghuni_asrama_6
+  examples: |
+    - apa saja informasi riwayat kesehatan yang harus dimasukkan di form biodata penghuni asrama mahasiswa universitas sriwijaya?
+    - apa saja informasi riwayat kesehatan yang harus dimasukkan di biodata asrama mahasiswa?
+    - apa saja yang di butuhkan terkait informasi riwayat kesehatan pada biodata penghuni asrama mahasiswa?
+    - data riwayat kesehatan apa saja yang diperlukan biodata asrama mahasiswa?
+    - data terkait riwayat kesehatan apa saja yang dibutuhkan untuk form biodata asrama mahasiswa?
+    - data apa yang diperlukan untuk mengisi form biodata mahasiswa pada bagian riwayat kesehatan?
+    - data terkait riwayat kesehatan pada form biodata mahasiswa perlu di isi apa?
+    - biodata asrama mahasiswa memerlukan data riwayat kesehatan apa saja?
+    - biodata asrama bagian riwayat kesehatan butuh di isi apa saja?
+    - biodata asrama mahasiswa apa saja yang di isi pada bagian riwayat kesehatannya?
+    - biodata asrama mahasiswa unsri apa saja informasi yang dibutuhkan pada bagian riwayat kesehatannya?
+- intent: faq/tanya_biodata_penghuni_asrama_7
+  examples: |
+    - bagaimana format biodata penghuni asrama mahasiswa universitas sriwijaya?
+    - bagaimana tampilan biodata penghuni asrama mahasiswa universitas sriwijaya?
+    - bagaimana tampilan format biodata penghuni asrama mahasiswa universitas sriwijaya?
+    - bagaimana tampilan bentuk biodata penghuni asrama mahasiswa universitas sriwijaya?
+    - bagaimana contoh biodata penghuni asrama mahasiswa universitas sriwijaya?
+    - bagaimana contoh format biodata penghuni asrama mahasiswa universitas sriwijaya?
+    - bagaimana contoh bentuk biodata penghuni asrama mahasiswa universitas sriwijaya?
+    - bagaimana contoh tampilan biodata penghuni asrama mahasiswa universitas sriwijaya?
+    - bagaimana contoh format tampilan biodata penghuni asrama mahasiswa universitas sriwijaya?
+    - bagaimana contoh bentuk tampilan biodata penghuni asrama mahasiswa universitas sriwijaya?
+    - apakah di sini ada format form biodata penghuni asrama mahasiswa?
+    - apakah ada contoh bentuk biodata asrama mahasiswa unsri?
+    - apakah format biodata penghuni asrama mahasiswa unsri disediakan?
+    - apakah disediakan format untuk formulir biodata penghuni asrama mahasiswa universitas sriwijaya?
+- intent: faq/tanya_formulir_pengunduran_diri_1
+  examples: |
+    - siapa yang mengisi formulir pengunduran diri?
+    - siapa pengisi formulir pengunduran diri?
+    - siapa yang boleh mengisi formulir pengunduran diri sebagai mahasiswa?
+    - siapa orang yang mengisi formulir pengunduran diri?
+    - siapa manusia yang boleh mengisi formulir pengunduran diri?
+    - formulir pengunduran diri di isi oleh siapa?
+    - formulir pengunduran diri siapa ya yang mengisinya?
+    - formulir pengunduran diri apakah mahasiswa yang mengisinya?
+    - formulir pengunduran diri bisakah di isi oleh orang tua?
+    - formulir pengunduran diri ingin saya isi sebagai mahasiswa, apakah boleh?
+    - formulir pengunduran diri mengisinya siapa ya?
+    - apakah formulir pengunduran diri di isi oleh mahasiswa?
+    - apakah formulir pengunduran diri di isi oleh orang tua?
+    - apakah formulir pengunduran diri bisa di isi oleh orang tua?
+    - apakah formulir pengunduran diri mahasiswa yang isi?
+    - apakah formulir pengunduran diri mahasiswa yang mengisinya?
+    - apakah formulir pengunduran diri boleh di isi orang tua?
+    - apakah formulir pengunduran diri boleh saya isi sebagai mahasiswa?
+    - bisakah formulir pengunduran diri di isi oleh orang tua?
+    - bisakah formulir pengunduran diri bukan mahasiswa yang isinya?
+    - bisakah formulir pengunduran diri bukan mahasiswa yang isi formulirnya?
+    - bisakah formulir pengunduran diri mahasiswa yang mengisinya?
+- intent: faq/tanya_formulir_pengunduran_diri_2
+  examples: |
+    - apa saja yang perlu di isi di formulir pengunduran diri?
+    - apa saja isian untuk formulir pengunduran diri?
+    - apa isian yang perlu saya isi pada formulir pengunduran diri sebagai mahasiswa?
+    - apa isi yang harus saya isi pada formulir pengunduran diri?
+    - apa format yang harus saya isi pada formulir pengunduran diri sebagai mahasiswa universitas sriwijaya?
+    - bisakah saya mendapatkan isi apa saja pada formulir pengunduran diri?
+    - bisakah saya dapat isi dari formulir pengunduran diri?
+    - bisakah saya dapat format apa saja yang di isi pada formulir pengunduran diri?
+    - bisakah formulir pengunduran diri isinya saya dapatkan?
+    - bisakah saya dapat format isi pengunduran diri sebagai mahasiswa?
+- intent: faq/tanya_formulir_pengunduran_diri_3
+  examples: |
+    - bagaimana format formulir pengunduran diri sebagai mahasiswa universitas sriwijaya?
+    - bagaimana bentuk dari formulir pengunduran diri sebagai mahasiswa universitas sriwijaya?
+    - bagaimana tampilan formulir pengunduran diri sebagai mahasiswa universitas sriwijaya?
+    - bagaimana tampilan format formulir pengunduran diri sebagai mahasiswa universitas sriwijaya?
+    - bagaimana tampilan bentuk formulir pengunduran diri sebagai mahasiswa universitas sriwijaya?
+    - bagaimana contoh formulir pengunduran diri sebagai mahasiswa universitas sriwijaya?
+    - bagaimana contoh format formulir pengunduran diri sebagai mahasiswa universitas sriwijaya?
+    - bagaimana contoh bentuk formulir pengunduran diri sebagai mahasiswa universitas sriwijaya?
+    - bagaimana contoh tampilan formulir pengunduran diri sebagai mahasiswa universitas sriwijaya?
+    - bagaimana contoh format tampilan formulir pengunduran diri sebagai mahasiswa universitas sriwijaya?
+    - bagaimana contoh bentuk tampilan formulir pengunduran diri sebagai mahasiswa universitas sriwijaya?
+- intent: faq/tanya_pindah_program_studi_1
+  examples: |
+    - tanda tangan siapa saja yang dibutuhkan dalam formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya membutuhkan tanda tangan siapa saja?
+    - siapa saja yang memberikan tanda tangan pada formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya
+    - tanda tangan siapa saja yang dibutuhkan dalam formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan unsri?
+    - formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan unsri membutuhkan tanda tangan siapa saja?
+    - siapa saja yang memberikan tanda tangan pada formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan unsri
+- intent: faq/tanya_pindah_program_studi_2
+  examples: |
+    - formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya ditujukan pada siapa?
+    - kepada siapa formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya ditujukan?
+    - siapa orang yang memiliki tanggung jawab dalam menilai formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - siapa orang yang akan menerima formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan unsri ditujukan pada siapa?
+    - kepada siapa formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan unsri ditujukan?
+    - siapa orang yang memiliki tanggung jawab dalam menilai formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan unsri?
+    - siapa orang yang akan menerima formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan unsri?
+- intent: faq/tanya_pindah_program_studi_3
+  examples: |
+    - bagaimana format formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana bentuk dari formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana tampilan formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana tampilan format formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana tampilan bentuk formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana contoh formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana contoh format formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana contoh bentuk formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana contoh tampilan formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana contoh format tampilan formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana contoh bentuk tampilan formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana format formulir perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana bentuk dari formulir perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana tampilan formulir perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana tampilan format formulir perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana tampilan bentuk formulir perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana contoh formulir perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana contoh format formulir perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana contoh bentuk formulir perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana contoh tampilan formulir perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana contoh format tampilan formulir perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - bagaimana contoh bentuk tampilan formulir perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+- intent: faq/tanya_pindah_program_studi_4
+  examples: |
+    - data apa saja yang dibutuhkan dalam formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - apa saja data yang dibutuhkan dalam formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan universitas sriwijaya?
+    - data apa saja yang dibutuhkan dalam formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan unsri?
+    - apa saja data yang dibutuhkan dalam formulir permohonan perpindahan mahasiswa antar program studi dalam lingkungan unsri?
+- intent: faq/tanya_pindah_ke_unsri_1
+  examples: |
+    - cara pindah ke universitas sriwijaya?
+    - bagaimana cara pindah ke universitas sriwijaya?
+    - apa yang perlu disiapkan untuk pindah ke universitas sriwijaya?
+    - cara pindah ke unsri?
+    - bagaimana cara pindah ke unsri?
+    - apa yang perlu dipersiapkan untuk pindah ke unsri?
+- intent: faq/tanya_pindah_ke_unsri_2
+  examples: |
+    - apa saja formulir yang dapat dijadikan bahan pertimbangan untuk pindah ke unsri?
+    - apa saja formulir yang dapat dijadikan bahan pertimbangan untuk pindah ke universitas sriwiaya?
+    - lampiran apa yang dapat dijadikan bahan pertimbangan untuk pindah ke unsri?
+    - surat apa yang bisa menjadi bahan pertimbangan untuk pindah ke unsri?
+    - sertifikat apa yang menjadi bahan pertimbangan untuk pindah ke unsri?
+    - dokumen apa yang berguna sebagai bahan pertimbangan untuk pindah ke unsri?
+- intent: faq/tanya_pindah_ke_unsri_3
+  examples: |
+    - berapa lembar fotokopi khs yang diperlukan untuk mengisi formulir perpindahan universitas sriwijaya?
+    - apakah fotokopi khs harus dilegalisir dalam pengisian formulir perpindahan universitas sriwijaya?
+    - kertas apa yang digunakan untuk fotokopi khs dalam formulir perpindahan universitas sriwijaya?
+    - berapa lembar fotokopi nilai akademik yang diperlukan dalam formulir perpindahan universitas sriwijaya?
+    - apakah fotokopi nilai akademik harus dilegalisir formulir perpindahan universitas sriwijaya?
+- intent: faq/tanya_pindah_ke_unsri_4
+  examples: |
+    - apakah diperlukan materai untuk menandatangani formulir perpindahan universitas sriwijaya?
+    - materai apa yang digunakan untuk formulir perpindahan universitas sriwijaya?
+    - berapa banyak materai yang diperlukan untuk mengisi formulir perpindahan universitas sriwijaya?
+- intent: faq/tanya_pindah_ke_unsri_5
+  examples: |
+    - data apa sajakah yang diperlukan untuk mengisi formulir perpindahan universitas sriwijaya?
+    - biodata yang dibutuhkan untuk mengisi formulir perpindahan universitas sriwijaya?
+    - apakah data orang tua diperlukan dalam mengisi formulir perpindahan universitas sriwijaya?
+- intent: faq/tanya_pindah_mahasiswa_unsri_ke_pt_lain_6
+  examples: |
+    - bagaimana format formulir permohonan perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana bentuk dari formulir permohonan perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana tampilan formulir permohonan perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana tampilan format formulir permohonan perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana tampilan bentuk formulir permohonan perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana contoh formulir permohonan perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana contoh format formulir permohonan perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana contoh bentuk formulir permohonan perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana contoh tampilan formulir permohonan perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana contoh format tampilan formulir permohonan perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana contoh bentuk tampilan formulir permohonan perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana format formulir perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana bentuk dari formulir perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana tampilan formulir perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana tampilan format formulir perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana tampilan bentuk formulir perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana contoh formulir perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana contoh format formulir perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana contoh bentuk formulir perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana contoh tampilan formulir perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana contoh format tampilan formulir perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana contoh bentuk tampilan formulir perpindahan mahasiswa dari perguruan tinggi lain ke universitas sriwijaya?
+    - bagaimana format formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana bentuk dari formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana tampilan formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana tampilan format formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana tampilan bentuk formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana contoh formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana contoh format formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana contoh bentuk formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana contoh tampilan formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana contoh format tampilan formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana contoh bentuk tampilan formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana format formulir perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana bentuk dari formulir perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana tampilan formulir perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana tampilan format formulir perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana tampilan bentuk formulir perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana contoh formulir perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana contoh format formulir perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana contoh bentuk formulir perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana contoh tampilan formulir perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana contoh format tampilan formulir perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana contoh bentuk tampilan formulir perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+- intent: faq/tanya_pindah_mahasiswa_unsri_ke_pt_lain_1
+  examples: |
+    - apakah terdapat formulir untuk permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - halaman berapa formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+- intent: faq/tanya_pindah_mahasiswa_unsri_ke_pt_lain_2
+  examples: |
+    - dokumen apa saja yang harus dilampirkan di formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - apakah formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain membutuhkan lampiran?
+    - apa saja fotokopi yang dibutuhkkan sebagai lampiran di formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+- intent: faq/tanya_pindah_mahasiswa_unsri_ke_pt_lain_3
+  examples: |
+    - tanggal berapa yang harus saya isi di formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - bagaimana cara penulisan tanggal di formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+- intent: faq/tanya_pindah_mahasiswa_unsri_ke_pt_lain_4
+  examples: |
+    - kepada siapa formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain ditujukan?
+    - formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain dikirimkan kemana?
+- intent: faq/tanya_pindah_mahasiswa_unsri_ke_pt_lain_5
+  examples: |
+    - tanda tangan siapa yang dibutuhkan dalam formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain?
+    - formulir permohonan perpindahan mahasiswa dari universitas sriwijaya ke perguruan tinggi lain ditandatangani siapa?
+- intent: faq/tanya_permohonan_wisuda_1
+  examples: |
+    - data apa saja yang perlu diisikan pada formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - data apa saja yang perlu diinputkan kedalam formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - data apa saja yang ada pada formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - data apa saja yang diperlukan untuk mengisi formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - data apa saja yang diinputkan kedalam formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - data apa saja yang perlu diisikan pada formulir permohonan mengikuti wisuda unsri?
+    - data apa saja yang perlu diinputkan kedalam formulir permohonan mengikuti wisuda unsri?
+    - data apa saja yang ada pada formulir permohonan mengikuti wisuda unsri?
+    - data apa saja yang diperlukan untuk mengisi formulir permohonan mengikuti wisuda unsri?
+    - data apa saja yang diinputkan kedalam formulir permohonan mengikuti wisuda unsri?
+- intent: faq/tanya_permohonan_wisuda_2
+  examples: |
+    - apa saja berkas persyaratan yang diperlukan untuk melakukan permohonan mengikuti wisuda universitas sriwijaya?
+    - apa saja berkas persyaratan yang harus dilampirkan untuk melakukan permohonan mengikuti wisuda universitas sriwijaya?
+    - apa saja berkas persyaratan yang wajib dilampirkan untuk melakukan permohonan mengikuti wisuda universitas sriwijaya?
+    - apa saja berkas persyaratan yang disertakan bersama formulir untuk melakukan permohonan mengikuti wisuda universitas sriwijaya?
+    - apa saja berkas persyaratan yang harus disertakan bersama formulir untuk melakukan permohonan mengikuti wisuda universitas sriwijaya?
+    - apa saja berkas persyaratan yang wajib disertakan bersama formulir untuk melakukan permohonan mengikuti wisuda universitas sriwijaya?
+    - apakah ada berkas-berkas persyaratan yang harus dilampirkan mahasiswa untuk melakukan permohonan mengikuti wisuda universitas sriwijaya?
+    - apakah ada berkas-berkas persyaratan yang wajib dilampirkan mahasiswa untuk melakukan permohonan mengikuti wisuda universitas sriwijaya?
+    - apakah ada berkas-berkas persyaratan yang perlu dilampirkan mahasiswa untuk melakukan permohonan mengikuti wisuda universitas sriwijaya?
+    - apa saja berkas yang diperlukan sebagai persyaratan akademis serta administratif untuk dilampirkan mahasiswa ketika melakukan permohonan mengikuti wisuda universitas sriwijaya?
+    - apa saja berkas persyaratan yang diperlukan untuk melakukan permohonan mengikuti wisuda unsri?
+    - apa saja berkas persyaratan yang harus dilampirkan untuk melakukan permohonan mengikuti wisuda unsri?
+    - apa saja berkas persyaratan yang wajib dilampirkan untuk melakukan permohonan mengikuti wisuda unsri?
+    - apa saja berkas persyaratan yang disertakan bersama formulir untuk melakukan permohonan mengikuti wisuda unsri?
+    - apa saja berkas persyaratan yang harus disertakan bersama formulir untuk melakukan permohonan mengikuti wisuda unsri?
+    - apa saja berkas persyaratan yang wajib disertakan bersama formulir untuk melakukan permohonan mengikuti wisuda unsri?
+    - apakah ada berkas-berkas persyaratan yang harus dilampirkan mahasiswa untuk melakukan permohonan mengikuti wisuda unsri?
+    - apakah ada berkas-berkas persyaratan yang wajib dilampirkan mahasiswa untuk melakukan permohonan mengikuti wisuda unsri?
+    - apakah ada berkas-berkas persyaratan yang perlu dilampirkan mahasiswa untuk melakukan permohonan mengikuti wisuda unsri?
+    - apa saja berkas yang diperlukan sebagai persyaratan akademis serta administratif untuk dilampirkan mahasiswa ketika melakukan permohonan mengikuti wisuda unsri?
+- intent: faq/tanya_permohonan_wisuda_3
+  examples: |
+    - bagaimana format formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - bagaimana bentuk dari formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - bagaimana tampilan formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - bagaimana tampilan format formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - bagaimana tampilan bentuk formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - bagaimana contoh formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - bagaimana contoh format formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - bagaimana contoh bentuk formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - bagaimana contoh tampilan formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - bagaimana contoh format tampilan formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - bagaimana contoh bentuk tampilan formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - bagaimana format formulir permohonan mengikuti wisuda unsri?
+    - bagaimana bentuk dari formulir permohonan mengikuti wisuda unsri?
+    - bagaimana tampilan formulir permohonan mengikuti wisuda unsri?
+    - bagaimana tampilan format formulir permohonan mengikuti wisuda unsri?
+    - bagaimana tampilan bentuk formulir permohonan mengikuti wisuda unsri?
+    - bagaimana contoh formulir permohonan mengikuti wisuda unsri?
+    - bagaimana contoh format formulir permohonan mengikuti wisuda unsri?
+    - bagaimana contoh bentuk formulir permohonan mengikuti wisuda unsri?
+    - bagaimana contoh tampilan formulir permohonan mengikuti wisuda unsri?
+    - bagaimana contoh format tampilan formulir permohonan mengikuti wisuda unsri?
+    - bagaimana contoh bentuk tampilan formulir permohonan mengikuti wisuda unsri?
+- intent: faq/tanya_permohonan_wisuda_4
+  examples: |
+    - berapa ukuran pas foto yang ada didalam formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - berapa ukuran pas foto yang harus ditempelkan pada formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - berapa banyak pas foto yang diperlukan mahasiswa untuk mengisi formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - berapa jumlah pas foto yang diperlukan mahasiswa untuk mengisi formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - apakah diperlukan pas foto untuk mengisi formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - apakah terdapat pas foto didalam formulir permohonan mengikuti wisuda universitas sriwijaya?
+    - berapa ukuran pas foto yang ada didalam formulir permohonan mengikuti wisuda unsri?
+    - berapa ukuran pas foto yang harus ditempelkan pada formulir permohonan mengikuti wisuda unsri?
+    - berapa banyak pas foto yang diperlukan mahasiswa untuk mengisi formulir permohonan mengikuti wisuda unsri?
+    - berapa jumlah pas foto yang diperlukan mahasiswa untuk mengisi formulir permohonan mengikuti wisuda unsri?
+    - apakah diperlukan pas foto untuk mengisi formulir permohonan mengikuti wisuda unsri?
+    - apakah terdapat pas foto didalam formulir permohonan mengikuti wisuda unsri?
+- intent: faq/biodata_akademik_alumni_1
+  examples: |
+    - berapa ukuran pas foto yang diperlukan untuk biodata akademik alumni?
+    - ukuran pas foto yang digunakan untuk biodata akademik alumni?
+    - pas foto ukuran berapa yang diperlukan untuk biodata akademik alumni?
+- intent: faq/biodata_akademik_alumni_2
+  examples: |
+    - warna apa yang digunakan untuk pas foto pada biodata akademik alumni?
+    - apa warna background pas foto biodata akademik alumni?
+- intent: faq/biodata_akademik_alumni_3
+  examples: |
+    - data apa saja yang diperlukan untuk biodata akademik alumni?
+    - untuk mengisi biodata akademik alumni data yang diperlukan apa saja?
+- intent: faq/biodata_akademik_alumni_4
+  examples: |
+    - apakah data orang tua diperlukan untuk mengisi biodata akademik alumni?
+    - untuk mengisi data orang tua pada biodata akademik alumni data apa saja yang diperlukan?
+- intent: faq/biodata_akademik_alumni_5
+  examples: |
+    - apakah predikat kelulusan perlu diisi pada biodata akademik alumni?
+    - apakah ipk dan predikat kelulusan diperlukan untuk mengisi biodata akademik alumni?
+    - untuk mengisi biodata akademik alumni apakah ipk diperlukan?
+    - apakah saya perlu mengisi predikat kelulusan pada biodata akademik alumni?
+- synonym: jam
+  examples: |
+    - waktu
+    - pukul
+- lookup: isi_formulir
+  examples: |
+    - penghuni asrama
+    - asrama
+    - pengunduran diri
+    - pengunduran
+    - perpindahan
+    - mengikuti wisuda
+    - wisuda
+    - alumni
+- lookup: tipe_permohonan
+  examples: |
+    - perguruan tinggi lain
+    - ptn lain
+    - program studi
+    - antar prodi
+    - universitas sriwijaya
+    - unsri
